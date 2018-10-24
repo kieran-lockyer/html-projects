@@ -1,0 +1,25 @@
+@mixin center($height) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $height;
+    width: 100%;
+}
+
+@mixin phone {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 501px) and (max-width: 960px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 961px) {
+        @content;
+    }
+}
